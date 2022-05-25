@@ -6,13 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Models\Movie;
 
-class PageController extends Controller
+class MovieController extends Controller
 {
     public function index(){
 
         $movies = Movie::all();
-
-        dd($movies);
 
         return view('index', compact('movies'));
     }
